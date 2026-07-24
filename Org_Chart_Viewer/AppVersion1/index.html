@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Org Structure Explorer</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.1/dist/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="panel controls-panel">
+        <h1>Org Structure Explorer</h1>
+        <p>
+          Upload an Excel or CSV file with employee names, manager names, and titles to render a simple org chart.
+        </p>
+
+        <label class="dropzone" id="dropzone" for="fileInput">
+          <input id="fileInput" type="file" accept=".xlsx,.xls,.csv" />
+          <span>Drop a file here or click to choose one</span>
+        </label>
+
+        <div class="actions">
+          <button id="sampleBtn" type="button">Load sample data</button>
+        </div>
+
+        <div class="hint-box">
+          <strong>Expected columns</strong>
+          <ul>
+            <li>Name or Employee</li>
+            <li>Manager or Reports To</li>
+            <li>Title or Role</li>
+          </ul>
+          <p>Any close match will be recognized automatically.</p>
+        </div>
+
+        <div id="status" class="status">Waiting for a file...</div>
+      </section>
+
+      <section class="panel chart-panel">
+        <h2>Organization chart</h2>
+        <div id="chart" class="chart" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

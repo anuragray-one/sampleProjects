@@ -1,0 +1,7 @@
+Name,Manager,Title
+Ava Chen,,CEO
+Ben Ortiz,Ava Chen,Engineering Director
+Carla Singh,Ben Ortiz,Frontend Lead
+Derek Kim,Ben Ortiz,Backend Lead
+Eli Martinez,Carla Singh,UI Engineer
+Fiona Lewis,Derek Kim,Platform Engineer
